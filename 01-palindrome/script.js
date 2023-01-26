@@ -1,3 +1,4 @@
+'use strict';
 /*
  * Задача 1: «Палиндром»
  *
@@ -14,7 +15,8 @@
 */
 
 function palindrome(str) {
-    // Напишите код здесь
+    const i = str.toLowerCase();
+    return i === i.split('').reverse().join('');
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

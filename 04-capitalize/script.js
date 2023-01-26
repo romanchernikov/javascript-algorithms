@@ -1,3 +1,4 @@
+'use strict';
 /*
  * Задача 4: «С большой буквы»
  *
@@ -7,7 +8,13 @@
 */
 
 function capitalize(str) {
-    // Напишите код здесь
+    const arr = str.split(' ');
+    const newArr = [];
+    arr.forEach(item => {
+        let newItem = item[0].toUpperCase() + item.slice(1);
+        return newArr.push(newItem);
+    });
+    return newArr.join(' ');
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

@@ -9,7 +9,13 @@
 */
 
 function fibonacci(n) {
-    // Напишите код здесь
+    const arrFibonacci = [0, 1];
+    for (let i = 1; i <= n; i++) {
+        let sum = arrFibonacci[i] + arrFibonacci[i - 1]
+        arrFibonacci.push(sum);
+    }
+    console.log(arrFibonacci);
+    return arrFibonacci[n - 1];
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

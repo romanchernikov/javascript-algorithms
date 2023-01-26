@@ -8,7 +8,10 @@
 */
 
 function uniq(arr) {
-    // Напишите код здесь
+    const newArr = arr.filter((item, index, array) => {
+        return array.lastIndexOf(item) === index;
+    });
+    return newArr;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

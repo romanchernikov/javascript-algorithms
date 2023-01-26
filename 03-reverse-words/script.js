@@ -1,3 +1,4 @@
+'use strict';
 /*
  * Задача 3: «Развернуть слова в предложении»
  *
@@ -9,7 +10,9 @@
 */
 
 function reverseWords(str) {
-    // Напишите код здесь
+    const punctRE = /[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-.\/:№;<=>?@\[\]^_`{|}~]/g;
+    const spaceRE = /\s+/g;
+    return str.replace(punctRE, '').replace(spaceRE, ' ').split(' ').reverse().join(' ');
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

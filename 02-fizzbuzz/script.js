@@ -1,3 +1,4 @@
+'use strict';
 /*
  * Задача 2: «FizzBuzz»
  *
@@ -11,7 +12,19 @@
 */
 
 function fizzBuzz(num) {
-    // Напишите код здесь
+    if (num === 0) {
+        return undefined;
+    }
+    if (num % 3 === 0 && num % 5 === 0) {
+        return 'fizzbuzz';
+    }
+    if (num % 3 === 0) {
+        return 'fizz';
+    }
+    if (num % 5 === 0) {
+        return 'buzz';
+    }
+
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

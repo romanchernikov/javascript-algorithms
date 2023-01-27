@@ -10,7 +10,11 @@
 */
 
 function isPrime(n) {
-    // (n > 1 && n % 1 === 0 && n % n === 0) ? false : true;
+    if (n % 2 !== 0 && n > 1 && n % 1 === 0 && n % n === 0) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

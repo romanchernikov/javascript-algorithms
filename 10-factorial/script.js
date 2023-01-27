@@ -8,7 +8,18 @@
 */
 
 function factorial(n) {
-    // Напишите код здесь
+    if (n === 1 || n === 0) {
+        return 1;
+    }
+    if (n > 1) {
+        let arr = [];
+        for (let i = 0; i <= n; i++) {
+            arr[i] = i;
+        }
+        console.log(arr);
+        const res = arr.slice(2).reduce((previous, current) => previous * current);
+        return res;
+    }
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

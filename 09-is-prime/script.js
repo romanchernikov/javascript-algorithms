@@ -1,3 +1,4 @@
+'use strict';
 /*
  * Задача 9: «Простое число»
  *
@@ -10,7 +11,7 @@
 */
 
 function isPrime(n) {
-    if (n % 2 !== 0 && n > 1 && n % 1 === 0 && n % n === 0) {
+    if (n % 2 !== 0 && n > 1 && n % 1 === 0 && n % n === 0 || n === 2) {
         return true;
     } else {
         return false;
@@ -21,6 +22,7 @@ function isPrime(n) {
 
 console.log(isPrime(0)); // false
 console.log(isPrime(1)); // false
+console.log(isPrime(2)); // false
 console.log(isPrime(3)); // true
 console.log(isPrime(6)); // false
 console.log(isPrime(17)); // true

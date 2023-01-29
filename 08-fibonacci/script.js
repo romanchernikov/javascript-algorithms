@@ -1,3 +1,4 @@
+'use strict';
 /*
  * Задача 8: «Фибоначчи»
  *
@@ -11,7 +12,7 @@
 function fibonacci(n) {
     const arrFibonacci = [0, 1];
     for (let i = 1; i <= n; i++) {
-        let sum = arrFibonacci[i] + arrFibonacci[i - 1]
+        let sum = arrFibonacci[i] + arrFibonacci[i - 1];
         arrFibonacci.push(sum);
     }
     console.log(arrFibonacci);

@@ -1,3 +1,4 @@
+'use strict';
 /*
  * Задача 12: «Посчитать количество нулей»
  *
@@ -7,7 +8,18 @@
 */
 
 function countZeros(n) {
-    // Напишите код здесь
+    let count = 0;
+    if (n === 0) {
+        return 0;
+    }
+    for (let i = 1; i <= n; i++) {
+        `${i}`.split('').forEach((item) => {
+            if (item.includes('0')) {
+                count++;
+            }
+        });
+    }
+    return count;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

@@ -1,3 +1,4 @@
+'use strict';
 /*
  * Задача 7: «Анаграмма»
  *
@@ -29,3 +30,4 @@ console.log(anagram('finder', 'Friend')); // true
 console.log(anagram('folowers', 'Flowerosos')); // false
 console.log(anagram('hello', 'bye')); // false
 console.log(anagram('hello', 'bysalkdhe')); // false
+console.log(anagram('hello', 'up')); // false

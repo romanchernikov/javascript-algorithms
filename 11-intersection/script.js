@@ -1,3 +1,4 @@
+'use strict';
 /*
  * Задача 11: «Пересечения массивов»
  *
@@ -8,19 +9,14 @@
 */
 
 function intersection(arr1, arr2) {
-    arr1.forEach(itemA => {
-        const array = arr2.reduce((arr, itemB) => {
-            if (itemA === itemB) {
-                arr.push(itemA);
-            }
-            return arr;
-        }, []);
-        console.log(array);
-        return array;
-
+    let res = arr1.filter(el => arr2.lastIndexOf(el) > -1);
+    res = res.filter((item, index, array) => {
+        return array.lastIndexOf(item) === index;
     });
+    return res;
 }
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(intersection([1, 5, 4, 2], [8, 91, 4, 1, 3])); // [4, 1]
 console.log(intersection([1, 5, 4, 2], [7, 12])); // []
+console.log(intersection([1, 1, 5, 4, 2], [8, 91, 4, 1, 1, 3])); // 

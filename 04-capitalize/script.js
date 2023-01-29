@@ -8,13 +8,17 @@
 */
 
 function capitalize(str) {
-    const arr = str.split(' ');
-    const newArr = [];
-    arr.forEach(item => {
-        let newItem = item[0].toUpperCase() + item.slice(1);
-        return newArr.push(newItem);
-    });
-    return newArr.join(' ');
+    str = str.trim();
+    if (str !== '') {
+        const arr = str.trim().split(' ');
+        const newArr = [];
+        arr.forEach(item => {
+            let newItem = item[0].toUpperCase() + item.slice(1);
+            return newArr.push(newItem);
+        });
+        return newArr.join(' ');
+    }
+    return str === '' ? '' : str.trim() !== '' ? str.trim().replace(/^ +| +$|( ) +/g, "$1").split(' ').map(item => item[0].toUpperCase() + item.slice(1)).join(' ') : '';
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

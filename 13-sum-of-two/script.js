@@ -1,3 +1,4 @@
+'use strict';
 /*
  * Задача 13: «Сумма двух»
  *
@@ -9,7 +10,16 @@
 */
 
 function sumOfTwo(arr, sum) {
-    // Напишите код здесь
+    const res = [];
+    for (let i = 0; i <= arr.length; i++) {
+        for (let j = 0; j <= arr.length; j++) {
+            if (arr[i] + arr[j] === sum) {
+                res.push(i);
+                res.push(j);
+            }
+        }
+    }
+    return Boolean(res.join(', '));
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

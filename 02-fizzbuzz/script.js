@@ -12,21 +12,15 @@
 */
 
 function fizzBuzz(num) {
-    if (num === 0) {
-        return undefined;
+    for (let j = 1; j <= num; j++) {
+        let string = '';
+        if (j % 3 == 0) {
+            string += 'fizz';
+        }
+        if (j % 5 == 0) {
+            string += 'buzz';
+        }
+        console.log(string ? string : j);
     }
-    if (num % 3 === 0 && num % 5 === 0) {
-        return 'fizzbuzz';
-    }
-    if (num % 3 === 0) {
-        return 'fizz';
-    }
-    if (num % 5 === 0) {
-        return 'buzz';
-    }
-
 }
-
-// Протестируйте решение, вызывая функцию с разными аргументами:
-
 console.log(fizzBuzz(15));

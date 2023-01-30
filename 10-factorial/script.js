@@ -13,7 +13,7 @@ function factorial(n) {
         return 1;
     }
     if (n > 1) {
-        let arr = [];
+        const arr = [];
         for (let i = 0; i <= n; i++) {
             arr[i] = i;
         }

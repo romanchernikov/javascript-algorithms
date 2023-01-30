@@ -10,9 +10,14 @@
 */
 
 function anagram(str1, str2) {
-    const arrStr1 = str1.toLowerCase().split('');
-    const arrStr2 = str2.toLowerCase().split('');
-    console.log(arrStr2);
+
+    str1 = str1.toLowerCase();
+    str2 = str2.toLowerCase();
+    if (str1 === str2) {
+        return false;
+    }
+    const arrStr1 = str1.split('');
+    const arrStr2 = str2.split('');
     const a = arrStr1.every(item => {
         const b = arrStr2.some(latter => {
             return item === latter;
@@ -26,6 +31,7 @@ function anagram(str1, str2) {
     }
 }
 // Протестируйте решение, вызывая функцию с разными аргументами:
+console.log(anagram('UP', 'up')); // false
 console.log(anagram('finder', 'Friend')); // true
 console.log(anagram('folowers', 'Flowerosos')); // false
 console.log(anagram('hello', 'bye')); // false

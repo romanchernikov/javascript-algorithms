@@ -8,7 +8,7 @@
 */
 
 function primes(num) {
-    let arr = [];
+    const arr = [];
     for (let j = 2; j <= num; j++) {
 
         if (j % 2 !== 0 && j > 1 && j % 1 === 0 && j % j === 0 && j % 3 !== 0 && j % 5 !== 0 || j === 2 || j === 3 || j === 5) {
